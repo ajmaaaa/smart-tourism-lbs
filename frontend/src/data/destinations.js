@@ -58,17 +58,6 @@ export const destinations = [
     image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80'
   },
   {
-    id: 'makam-engku-putri',
-    name: 'Makam Engku Putri',
-    category: 'Sejarah',
-    location: 'Kompleks Makam Engku Putri',
-    coordinates: { lat: 0.9286, lng: 104.4215 },
-    routeNodeId: 'engku_putri',
-    shortDesc: 'Situs makam tokoh penting Kesultanan Melayu.',
-    description: 'Makam Engku Putri menjadi bagian penting dari narasi sejarah Pulau Penyengat dan Kesultanan Riau-Lingga.',
-    image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80'
-  },
-  {
     id: 'pelabuhan-penyengat',
     name: 'Pelabuhan Penyengat',
     category: 'Transportasi',
@@ -78,16 +67,5 @@ export const destinations = [
     shortDesc: 'Titik kedatangan utama wisatawan dari Tanjungpinang.',
     description: 'Pelabuhan Penyengat merupakan akses utama menuju pulau menggunakan pompong dari Tanjungpinang.',
     image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80'
-  },
-  {
-    id: 'pantai-penyengat',
-    name: 'Tepi Laut Penyengat',
-    category: 'Alam',
-    location: 'Pesisir Pulau',
-    coordinates: { lat: 0.9267, lng: 104.4196 },
-    routeNodeId: 'tepi_laut',
-    shortDesc: 'Area pesisir untuk menikmati suasana pulau.',
-    description: 'Area tepi laut dapat menjadi titik santai untuk menikmati pemandangan Selat Riau dan aktivitas masyarakat pesisir.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80'
   }
 ]
