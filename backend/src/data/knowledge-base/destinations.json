@@ -89,5 +89,20 @@
       "sejarah",
       "pemerintahan"
     ]
+  },
+  {
+    "id": "istana-kantor",
+    "title": "Istana Kantor",
+    "type": "destination",
+    "category": "Sejarah",
+    "location": "Area Istana",
+    "summary": "Situs peninggalan pusat pemerintahan dan kehidupan bangsawan Melayu Riau.",
+    "description": "Situs peninggalan pusat pemerintahan dan kehidupan bangsawan Melayu Riau.",
+    "keywords": [
+      "istana",
+      "kantor",
+      "sejarah",
+      "pemerintahan"
+    ]
   }
 ]
