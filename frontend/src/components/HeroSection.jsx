@@ -120,6 +120,12 @@ function HeroSection() {
         icon: dest.id === selectedId ? activeDestIcon : destIcon
       })
         .bindPopup(`<strong>${dest.name}</strong><br><span>${dest.shortDesc}</span>`)
+        .bindTooltip(dest.name, {
+          permanent: false,
+          direction: 'top',
+          offset: [0, -14],
+          className: 'hero__tooltip'
+        })
         .on('click', () => selectDestination(dest))
 
       marker.addTo(destinationLayerRef.current)
