@@ -1,0 +1,102 @@
+[
+  {
+    "id": "gurindam-dua-belas",
+    "title": "Gurindam Dua Belas",
+    "type": "culture",
+    "category": "Sastra",
+    "summary": "Warisan sastra Melayu dari Raja Ali Haji yang berisi nilai moral, agama, dan kehidupan.",
+    "keywords": [
+      "gurindam",
+      "sastra",
+      "raja ali haji",
+      "melayu"
+    ]
+  },
+  {
+    "id": "Balai-Adat-Melayu",
+    "title": "Balai Adat Melayu",
+    "type": "culture",
+    "category": "Budaya",
+    "summary": "Bangunan ini difungsikan untuk melestarikan pakaian adat, replika pelaminan bersulam emas, serta artefak Kesultanan yang menonjolkan keagungan tradisi Melayu.",
+    "keywords": [
+      "tradisi",
+      "budaya",
+      "melayu",
+      "adat"
+    ]
+  },
+
+  {
+    "id": "kesultanan-riau-lingga",
+    "title": "Kesultanan Riau-Lingga",
+    "type": "culture",
+    "category": "Sejarah",
+    "summary": "Pulau Penyengat memiliki hubungan kuat dengan sejarah Kesultanan Riau-Lingga dan perkembangan budaya Melayu.",
+    "keywords": [
+      "kesultanan",
+      "riau lingga",
+      "sejarah",
+      "melayu"
+    ]
+  },
+  {
+    "id": "Bersepeda-dan-Becak",
+    "title": "Bersepeda dan Becak",
+    "type": "culture",
+    "category": "Tradisi",
+    "summary": "Moda transportasi lokal yang ramah lingkungan karena pulau ini melarang penggunaan kendaraan bermotor roda empat, mempertahankan suasana pemukiman tradisional yang tenang.",
+    "keywords": [
+      "tradisi",
+      "budaya",
+      "melayu"
+    ]
+  },
+  {
+    "id": "Nilai-religius-dan-Makam-Bersejarah",
+    "title": "Nilai Religius dan Makam Bersejarah",
+    "type": "culture",
+    "category": "Sejarah",
+    "summary": "Sebagai kawasan cagar budaya, terdapat sekitar 45 situs peninggalan termasuk makam keluarga kerajaan, tokoh sastra, dan pahlawan nasional seperti Raja Haji Fisabilillah yang kental dengan nuansa ziarah religi.",
+    "keywords": [
+      "sejarah",
+      "makam bersejarah",
+      "budaya"
+    ]
+  },
+  {
+    "id": "Pakaian-Adat-Melayu",
+    "title": "Pakaian Adat Melayu",
+    "type": "culture",
+    "category": "Budaya",
+    "summary": "Pakaian adat Melayu yang dipamerkan di Balai Adat Melayu mencerminkan keindahan dan keagungan tradisi budaya setempat.",
+    "keywords": [
+      "pakaian adat",
+      "melayu",
+      "budaya"
+    ]
+  },
+  {
+    "id": "Pelaminan-Bersulam-Emas",
+    "title": "Pelaminan Bersulam Emas",
+    "type": "culture",
+    "category": "Budaya",
+    "summary": "Replika pelaminan bersulam emas yang dipamerkan di Balai Adat Melayu menonjolkan keagungan tradisi budaya setempat.",
+    "keywords": [
+      "pelaminan",
+      "emas",
+      "budaya"
+    ]
+  },
+  {
+    "id": "Masjid-Raya-Sultan-Riau",
+    "title": "Masjid Raya Sultan Riau",
+    "type": "culture",
+    "category": "Sejarah",
+    "summary": "Ikon kebanggaan masyarakat yang dibangun pada abad ke-19. Keunikan bangunannya terletak pada campuran bahan perekatnya yang konon menggunakan putih telur.",
+    "keywords": [
+      "masjid",
+      "sejarah",
+      "budaya"
+    ]
+  }
+]
