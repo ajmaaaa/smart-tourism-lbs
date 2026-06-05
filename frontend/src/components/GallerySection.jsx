@@ -15,6 +15,7 @@ const fallbackGalleryItems = [
 
 function GallerySection() {
   const [galleryItems, setGalleryItems] = useState(fallbackGalleryItems)
+  const [showAll, setShowAll] = useState(false)
 
   useEffect(() => {
     fetchContent('/api/gallery', fallbackGalleryItems).then((items) => {
@@ -27,7 +28,7 @@ function GallerySection() {
       <SectionHeader badge="Galeri" title="Galeri Foto" desc="Keindahan Pulau Penyengat dari berbagai sudut pandang." />
 
       <div className="gallery-grid">
-        {galleryItems.map((item) => (
+        {galleryItems.slice(0, showAll ? undefined : 6).map((item) => (
           <article key={item.id || item.title} className={`gallery-card ${item.className || ''}`}>
             <img src={getImageUrl(item.image)} alt={item.title} loading="lazy" />
             <div className="gallery-card__overlay">
@@ -37,9 +38,13 @@ function GallerySection() {
         ))}
       </div>
 
-      <div className="gallery-action">
-        <button className="btn-outline">🖼️ Lihat Semua Foto</button>
-      </div>
+      {galleryItems.length > 6 && (
+        <div className="gallery-action">
+          <button className="btn-outline" onClick={() => setShowAll(!showAll)}>
+            {showAll ? '🙈 Sembunyikan Foto' : '🖼️ Lihat Semua Foto'}
+          </button>
+        </div>
+      )}
     </section>
   )
 }
