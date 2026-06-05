@@ -4,9 +4,9 @@
     "title": "Masjid Raya Sultan Riau",
     "type": "destination",
     "category": "Religi",
-    "location": "Kampung Masjid",
+    "location": "Balai Kelurahan Penyengat",
     "summary": "Ikon utama Pulau Penyengat dan pusat wisata religi bersejarah. Masjid ini menjadi daya tarik utama wisatawan yang ingin mengenal sejarah Kesultanan Riau-Lingga.",
-    "description": "Ikon utama Pulau Penyengat dan pusat wisata religi bersejarah. Masjid ini menjadi daya tarik utama wisatawan yang ingin mengenal sejarah Kesultanan Riau-Lingga.",
+    "description": "Masjid ini pertama kali dibangun pada tahun 1803, seiring dengan dibukanya pulau penyengat sebagai mas kawin dan kemudian sebagai tempat kediaman Raja Hamidah Engku Putri. Pada masa itu, mesjid ini diperkirakan terbuat dari putih telur. Tahun 1832 Raja Abdurrahman pada masa itu menjabat sebagai Yang Dipertuankan MUda ke-VII Kerajaan Riau-Lingga melakukan renovasi.",
     "keywords": [
       "masjid",
       "religi",
@@ -20,9 +20,9 @@
     "title": "Benteng Bukit Kursi",
     "type": "destination",
     "category": "Sejarah",
-    "location": "Bukit Kursi",
+    "location": "Jl. Bukit Kursi",
     "summary": "Situs benteng pertahanan peninggalan masa Kesultanan Riau-Lingga. Cocok untuk wisata sejarah dan edukasi.",
-    "description": "Situs benteng pertahanan peninggalan masa Kesultanan Riau-Lingga. Cocok untuk wisata sejarah dan edukasi.",
+    "description": "Benteng ini dibangun pada abad ke-18 tahun 1782, pada masa pemerintahan Sultah Mahmud Riayatsyah Yang Dipertuan Besar Riau-Lingga-Johor-Pahang dan Raji Haji Fisabilillah Yang Dipertuan Muda Riau IV pecah perang antara Kerajaan Riau-JOhor melawan Belanda, benteng ini menjadi salah satu benteng pertahanan yang utama menjaga kapal yang akan masuk ke pusat Kerajaan Riau-Johor di Hulu Sungai Riau pada zaman pemerintahan Yang Dipertuan Muda Raja Ja'far (1806-1832).",
     "keywords": [
       "benteng",
       "bukit kursi",
@@ -31,13 +31,13 @@
     ]
   },
   {
-    "id": "makam-raja-ali-haji",
+    "id": "Komplek-Makam",
     "title": "Makam Raja Ali Haji",
     "type": "destination",
     "category": "Sejarah",
-    "location": "Kompleks Makam",
+    "location": "Jl. Engku Puteri Pulau Penyengat",
     "summary": "Makam tokoh bahasa dan sastra Melayu yang berperan penting dalam sejarah kebudayaan Melayu.",
-    "description": "Makam tokoh bahasa dan sastra Melayu yang berperan penting dalam sejarah kebudayaan Melayu.",
+    "description": "Raja Ali Haji merupakan salah satu Pahlawan Nasional (1808-1873). Beliau adalah sastrawan yang terkenal dengan karyanya Gurindam 12 dan terkenal sebagai Bapak Bahasa Indonesia.",
     "keywords": [
       "raja ali haji",
       "makam",
@@ -50,9 +50,9 @@
     "title": "Balai Adat Melayu",
     "type": "destination",
     "category": "Budaya",
-    "location": "Pusat Pulau",
+    "location": "Jl. Balai Adat Pulau Penyengat",
     "summary": "Tempat untuk mengenal adat, tradisi, dan identitas Melayu di Pulau Penyengat.",
-    "description": "Tempat untuk mengenal adat, tradisi, dan identitas Melayu di Pulau Penyengat.",
+    "description": "Di Pulau Penyengat terdapat bangunan yang merupakan replika dari bangunan tradisional Melayu. Bangunan ini disebut dengan Balai Adat Melayu Riau, dibangun pada tahun 1985 yang bertujuan sebagai balai pertemuan bagi masyarakat. Bangunan ini terletak di Kampung ladi Pulau penyengat. Bentuk bangunan Balai Adat merupakan jenis bangunan tradisional Melayu Selasa Jatuh Kembar, selain bangunan utama juga terdapat bangunan kecil pendukung sebanyak 4 buah.",
     "keywords": [
       "adat",
       "budaya",
@@ -80,12 +80,57 @@
     "title": "Istana Kantor",
     "type": "destination",
     "category": "Sejarah",
-    "location": "Area Istana",
+    "location": "Jl. Istana Kantor",
     "summary": "Situs peninggalan pusat pemerintahan dan kehidupan bangsawan Melayu Riau.",
-    "description": "Situs peninggalan pusat pemerintahan dan kehidupan bangsawan Melayu Riau.",
+    "description": "Istana Kantor adalah bekas kediaman Raja Ali Marhum Kantor atau Raja Ali Yang Dipertuan Muda Riau VIII (1844 M - 1857 M) di Pulau Penyengat. Selain berfungsi sebgai istana, bangunan yang besar dan megah ini juga berfungsi sebagai kantor dari Bahasa Belanda : Kantoor) tempat Raja Ali menjalankan perintahnya sebagai Yang Dipertuan Muda Riau zaman pemerintahan Raja Ali Mahrum.",
     "keywords": [
       "istana",
       "kantor",
+      "sejarah",
+      "pemerintahan"
+    ]
+  },
+ {
+    "id": "Gedung-Engku-Bilik",
+    "title": "Gedung Engku Bilik",
+    "type": "destination",
+    "category": "Sejarah",
+    "location": "Jl. Raja Jakfar",
+    "summary": "Situs peninggalan pusat pemerintahan dan kehidupan bangsawan Melayu Riau.",
+    "description": "Gedung ini terletak di Kampung Ladi tepatnya bersebelahan dengan komplek Makam Raja Jakfar. Bangunan ini berbentuk segi empat dan berlantai dua. Bangunan ini memiliki gaya bangunan Art Deco yang merupakan ciri khas bangunan Abad ke – 19. Bangunan ini merupakan rumah dari Raja Halimah yang merupakan adik Sultan Riau – Lingga terakhir Sultan Abdurrahman Muadzam Syah. Gedung Engku bilik merupakan bangunan berkembar dengan Istana Sultan Terengganu dan Istana Sultan Singapura di Kampung Gelam.",
+    "keywords": [
+      "gedung",
+      "engku bilik",
+      "sejarah",
+      "pemerintahan"
+    ]
+  },
+  {
+    "id": "Gedung-Tabib",
+    "title": "Gedung Tabib",
+    "type": "destination",
+    "category": "Sejarah",
+    "location": "Jl. Engku Puteri Pulau Penyengat",
+    "summary": "Situs peninggalan pusat pemerintahan dan Tempat Pengobatan Pulau Penyengat.",
+    "description": "Gedung ini merupakan Gedung kediaman Tabib Raja Daud. Beliau merupakan tabib pada masa kerajaan riau – lingga. Sebagai tabib, Raja Daud juga banyak menulis tentang ilmu pengobatan Melayu. Pada pengobatan Melayu banyak menggunakan bahan – bahan herbal, yang dikenal dalam pengobatan tabib Raja Daud adalah sistem pengobatan panas dan dingin. Dalam bukunya tabib Raja Daud menjelaskan tentang penyakit – penyakit yang ditimbulkan dari panas, pengobatannya dapat menggunakan dari herbal yang berunsurkan dingin. Gedung tabib terletak di Kampung Jambat, Gedung ini hanya tersisa bagian tembok dan pondasinya.",
+    "keywords": [
+      "gedung",
+      "tabib",
+      "sejarah",
+      "pemerintahan"
+    ]
+  },
+  {
+    "id": "Komplek-Makam-Raja-Ja'far",
+    "title": "Komplek Makam Raja Ja'far",
+    "type": "destination",
+    "category": "Sejarah",
+    "location": "Jl. Engku Puteri Pulau Penyengat",
+    "summary": "Makam Penata Pulau Penyengat dan Memindahkan Pusat Pemerintahan dari Pulau Bayan ke Pulau Penyengat.",
+    "description": "Raja Jakfar adalah Yang Dipertuan Muda ke -6 Kerajaan Riau–Lingga. Beliau merupakan anak Raja Haji Fisabilillah. Beliau diangakat sebagai Yang Dipertuan Muda kerajaan menggantikan Raja Ali Marhum Pulau bayan yang wafat pada tahun 1806. Pada masa pemerintahan Raja Jakfar, beliau menata Pulau Penyengat sedemikian rupa dan memindahkan pusat merintahan Yang Dipertuan Muda dari Pulau bayan ke Pulau Penyengat. Sebelum menjadi Yang Dipertuan Muda, Raja Jakfar merupakan seorang pengusaha penambangan Timah di Kelang – Selangor. Konon beliau adalah tokoh yang pertama mendirikan Kota Kuala Lumpur. Komplek makam Raja Jakfar merupakan komplek makam yang cukup luas dan berbentuk unik , di bagian luarnya dikelilingi tembok tinggi dan terdapat 2 kolah atau kolam, bangunan utama komplek makam ini berbentuk persegi panjang dan memiliki kubah dan terdapat mihrab di dalamnya. Konon sebelum bangunan ini dijadikan komplek pemakaman, bangunan ini merupakan mushala tempat Raja Jakfar melakukan ibadah. Di dalam komple makam ini juga terdapat makam permaisuri dan Raja Ali Yang Dipertuam Muda ke – 8 kerjaan Riau-Lingga..",
+    "keywords": [
+      "makam",
+      "raja ja'far",
       "sejarah",
       "pemerintahan"
     ]

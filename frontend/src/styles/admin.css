@@ -1,0 +1,276 @@
+.admin-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: #f5f2eb;
+  color: #172017;
+}
+
+.admin-shell--login {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: 24px;
+}
+
+.admin-login,
+.admin-panel,
+.admin-sidebar {
+  background: #ffffff;
+  border: 1px solid rgba(23, 61, 37, 0.12);
+  box-shadow: 0 18px 50px rgba(12, 25, 12, 0.08);
+}
+
+.admin-login {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+  border-radius: 8px;
+}
+
+.admin-login h1,
+.admin-sidebar h1,
+.admin-header h2 {
+  font-family: var(--font-serif);
+  color: var(--hijau-dark);
+  line-height: 1.08;
+}
+
+.admin-kicker {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px;
+  border-radius: 0;
+}
+
+.admin-sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-sidebar nav button,
+.admin-ghost {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  text-align: left;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: 800;
+}
+
+.admin-sidebar nav button.active,
+.admin-sidebar nav button:hover,
+.admin-ghost:hover {
+  color: var(--hijau);
+  background: var(--hijau-muted);
+}
+
+.admin-main {
+  padding: 28px;
+  overflow-x: hidden;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.admin-panel {
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.admin-form {
+  display: grid;
+  gap: 13px;
+}
+
+.admin-form h3,
+.admin-table-head h3 {
+  color: var(--hijau-dark);
+  font-size: 16px;
+}
+
+.admin-login label,
+.admin-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-login input,
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+}
+
+.admin-form textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.admin-login input:focus,
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: var(--hijau);
+  box-shadow: 0 0 0 3px rgba(46, 107, 39, 0.12);
+}
+
+.admin-check {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.admin-check input {
+  width: 18px;
+  height: 18px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  background: var(--hijau);
+  color: white;
+  font-weight: 900;
+}
+
+.admin-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.admin-message {
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--hijau-muted);
+  color: var(--hijau);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-table-head span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.admin-table th,
+.admin-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 13px;
+}
+
+.admin-table th {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-table td strong,
+.admin-table td small {
+  display: block;
+}
+
+.admin-table td small {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.admin-table td:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-table td button {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  background: #fff;
+  color: var(--hijau);
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .admin-sidebar nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+}

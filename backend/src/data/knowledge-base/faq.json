@@ -40,5 +40,21 @@
       "pak cik",
       "assistant"
     ]
+  },
+  
+  {
+    "id": "routing-astar",
+    "title": "Rute wisata dengan A*",
+    "type": "faq",
+    "category": "Teknis",
+    "summary": "Website menggunakan OpenStreetMap untuk tampilan peta. Rekomendasi rute dihitung memakai algoritma A* pada graf manual yang dibuat dari titik jalan hasil observasi lapangan.",
+    "keywords": [
+      "rute",
+      "astar",
+      "a star",
+      "graf manual",
+      "osm",
+      "peta"
+    ]
   }
 ]

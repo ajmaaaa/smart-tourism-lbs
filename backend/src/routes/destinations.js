@@ -1,10 +1,10 @@
 import express from 'express'
-import { getAllKnowledgeItems } from '../services/ragService.js'
+import { getDestinations } from '../services/contentService.js'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  const items = getAllKnowledgeItems().filter((item) => item.type === 'destination')
+router.get('/', async (req, res) => {
+  const items = await getDestinations()
   res.json({ data: items })
 })
 

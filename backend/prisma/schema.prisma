@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Destination {
+  id          String   @id
+  name        String
+  category    String
+  location    String
+  latitude    Float
+  longitude   Float
+  routeNodeId String?
+  shortDesc   String
+  description String
+  image       String?
+  keywords    String[] @default([])
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Culture {
+  id          String   @id
+  title       String
+  category    String
+  summary     String
+  description String?
+  image       String?
+  icon        String?
+  keywords    String[] @default([])
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Culinary {
+  id          String   @id
+  title       String
+  category    String?
+  summary     String
+  description String?
+  image       String?
+  keywords    String[] @default([])
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model GalleryItem {
+  id          String   @id
+  title       String
+  image       String
+  className   String?
+  category    String?
+  description String?
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Faq {
+  id          String   @id
+  title       String
+  category    String
+  summary     String
+  keywords    String[] @default([])
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Transportation {
+  id          String   @id
+  title       String
+  category    String
+  summary     String
+  description String?
+  keywords    String[] @default([])
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model History {
+  id          String   @id
+  title       String
+  period      String?
+  summary     String
+  description String?
+  keywords    String[] @default([])
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Source {
+  id          String   @id
+  title       String
+  type        String
+  publisher   String?
+  url         String?
+  description String?
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

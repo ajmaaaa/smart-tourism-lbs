@@ -1,9 +1,40 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import L from 'leaflet'
-import { destinations, PENYENGAT_CENTER, PENYENGAT_ZOOM } from '../data/destinations.js'
-import { calculateRoute, findNearestNode } from '../utils/astar.js'
+import { destinations as fallbackDestinations, PENYENGAT_CENTER, PENYENGAT_ZOOM } from '../data/destinations.js'
+import { fetchContent } from '../services/contentService.js'
+import { findNearestNode } from '../utils/astar.js'
 import { routeNodes } from '../data/routeGraph.js'
 import '../styles/hero.css'
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+
+async function fetchRoute(start, destination) {
+  const fromLat = start.lat
+  const fromLng = start.lng
+  const toLat = destination.lat
+  const toLng = destination.lng
+
+  const response = await fetch(
+    `${API_BASE}/route?fromLat=${encodeURIComponent(fromLat)}&fromLng=${encodeURIComponent(fromLng)}&toLat=${encodeURIComponent(toLat)}&toLng=${encodeURIComponent(toLng)}`
+  )
+
+  if (!response.ok) {
+    throw new Error('Routing request failed')
+  }
+
+  const data = await response.json()
+  if (!data.routes?.length) {
+    throw new Error('No route returned')
+  }
+
+  const route = data.routes[0]
+  const coordinates = route.geometry.coordinates.map(([lng, lat]) => [lat, lng])
+  return {
+    coordinates,
+    distance: Math.round(route.distance),
+    nodeNames: route.legs?.[0]?.summary ? route.legs[0].summary.split(' → ') : []
+  }
+}
 
 const destIcon = new L.DivIcon({
   className: '',
@@ -35,7 +66,8 @@ function HeroSection() {
   const userLayerRef = useRef(null)
   const routeLayerRef = useRef(null)
 
-  const [selectedId, setSelectedId] = useState(destinations[0].id)
+  const [destinations, setDestinations] = useState(fallbackDestinations)
+  const [selectedId, setSelectedId] = useState(fallbackDestinations[0].id)
   const [query, setQuery] = useState('')
   const [flyTarget, setFlyTarget] = useState([PENYENGAT_CENTER.lat, PENYENGAT_CENTER.lng])
   const [userPos, setUserPos] = useState(null)
@@ -45,8 +77,8 @@ function HeroSection() {
   const [routeStatus, setRouteStatus] = useState('Pilih tempat rekomendasi, lalu buat rute dari Pelabuhan Penyengat atau posisi Anda.')
 
   const selectedDestination = useMemo(
-    () => destinations.find((item) => item.id === selectedId) || destinations[0],
-    [selectedId]
+    () => destinations.find((item) => item.id === selectedId) || destinations[0] || fallbackDestinations[0],
+    [destinations, selectedId]
   )
 
   const filteredDestinations = useMemo(() => {
@@ -57,7 +89,19 @@ function HeroSection() {
       const text = `${dest.name} ${dest.category} ${dest.location} ${dest.shortDesc}`.toLowerCase()
       return text.includes(value)
     })
-  }, [query])
+  }, [destinations, query])
+
+  useEffect(() => {
+    fetchContent('/api/destinations', fallbackDestinations).then((items) => {
+      if (items.length) setDestinations(items)
+    })
+  }, [])
+
+  useEffect(() => {
+    if (!destinations.some((item) => item.id === selectedId) && destinations[0]) {
+      setSelectedId(destinations[0].id)
+    }
+  }, [destinations, selectedId])
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id)
@@ -80,7 +124,7 @@ function HeroSection() {
 
     window.addEventListener('select-destination', handler)
     return () => window.removeEventListener('select-destination', handler)
-  }, [selectDestination])
+  }, [destinations, selectDestination])
 
   useEffect(() => {
     if (!mapBoxRef.current || mapRef.current) return
@@ -124,7 +168,7 @@ function HeroSection() {
 
       marker.addTo(destinationLayerRef.current)
     })
-  }, [selectedId, selectDestination])
+  }, [destinations, selectedId, selectDestination])
 
   useEffect(() => {
     if (!mapRef.current) return
@@ -208,18 +252,23 @@ function HeroSection() {
     )
   }
 
-  const createRoute = () => {
-    const start = userPos ? findNearestNode(userPos) : routeNodes.pelabuhan
-    const result = calculateRoute(start.id, selectedDestination.routeNodeId)
+  const createRoute = async () => {
+    const startNode = userPos ? findNearestNode(userPos) : routeNodes.pelabuhan
+    const startName = userPos ? 'Posisi Anda' : routeNodes.pelabuhan.name
 
-    if (!result) {
+    const destNode = routeNodes[selectedDestination.routeNodeId] || findNearestNode(selectedDestination.coordinates)
+
+    setRouteStatus('Mengambil rute...')
+
+    try {
+      const result = await fetchRoute(startNode, destNode)
+      setRoute(result)
+      setRouteStatus(`Rute ${startName} ke ${selectedDestination.name}: ${result.distance} meter.`)
+    } catch (error) {
+      console.error(error)
       setRoute(null)
-      setRouteStatus('Rute belum tersedia untuk tujuan ini. Perlu penyesuaian graf manual.')
-      return
+      setRouteStatus('Gagal membuat rute. Coba lagi atau periksa koneksi.')
     }
-
-    setRoute(result)
-    setRouteStatus(`Rute ${start.name} ke ${selectedDestination.name}: ${result.distance} meter.`)
   }
 
   return (
@@ -248,7 +297,7 @@ function HeroSection() {
 
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">8<span>+</span></span>
+              <span className="hero__stat-num">{destinations.length}<span>+</span></span>
               <span className="hero__stat-label">Destinasi</span>
             </div>
             <div className="hero__stat">
@@ -296,7 +345,7 @@ function HeroSection() {
 
             <p className="hero__route-status">{routeStatus}</p>
 
-            {route && (
+            {route?.nodeNames?.length > 0 && (
               <div className="hero__route-list">
                 <strong>Urutan jalur:</strong>
                 <span>{route.nodeNames.join(' → ')}</span>

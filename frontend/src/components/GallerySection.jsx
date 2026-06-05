@@ -1,25 +1,35 @@
-import React from 'react'
-const galleryItems = [
-  { title: 'Masjid Sultan Riau', image: '/images/gallery-masjid.svg', className: 'tall' },
-  { title: 'Dermaga Pompong', image: '/images/gallery-dermaga.svg' },
-  { title: 'Tepi Laut Penyengat', image: '/images/gallery-laut.svg', className: 'wide' },
-  { title: 'Benteng Bukit Kursi', image: '/images/gallery-benteng.svg' },
-  { title: 'Senja Penyengat', image: '/images/gallery-sunset.svg' },
-  { title: 'Kuliner Melayu', image: '/images/gallery-kuliner.svg' },
-  { title: 'Budaya Melayu', image: '/images/gallery-budaya.svg', className: 'wide' },
-  { title: 'Makam Bersejarah', image: '/images/gallery-makam.svg' },
-  { title: 'Rumah Adat', image: '/images/gallery-adat.svg' }
+import React, { useEffect, useState } from 'react'
+import { fetchContent, getImageUrl } from '../services/contentService.js'
+
+const fallbackGalleryItems = [
+  { id: 'galeri-masjid', title: 'Masjid Sultan Riau', image: '/images/gallery-masjid.svg', className: 'tall' },
+  { id: 'galeri-dermaga', title: 'Dermaga Pompong', image: '/images/gallery-dermaga.svg' },
+  { id: 'galeri-laut', title: 'Tepi Laut Penyengat', image: '/images/gallery-laut.svg', className: 'wide' },
+  { id: 'galeri-benteng', title: 'Benteng Bukit Kursi', image: '/images/gallery-benteng.svg' },
+  { id: 'galeri-senja', title: 'Senja Penyengat', image: '/images/gallery-sunset.svg' },
+  { id: 'galeri-kuliner', title: 'Kuliner Melayu', image: '/images/gallery-kuliner.svg' },
+  { id: 'galeri-budaya', title: 'Budaya Melayu', image: '/images/gallery-budaya.svg', className: 'wide' },
+  { id: 'galeri-makam', title: 'Makam Bersejarah', image: '/images/gallery-makam.svg' },
+  { id: 'galeri-adat', title: 'Rumah Adat', image: '/images/gallery-adat.svg' }
 ]
 
 function GallerySection() {
+  const [galleryItems, setGalleryItems] = useState(fallbackGalleryItems)
+
+  useEffect(() => {
+    fetchContent('/api/gallery', fallbackGalleryItems).then((items) => {
+      if (items.length) setGalleryItems(items)
+    })
+  }, [])
+
   return (
     <section id="galeri" className="section gallery-section">
       <SectionHeader badge="Galeri" title="Galeri Foto" desc="Keindahan Pulau Penyengat dari berbagai sudut pandang." />
 
       <div className="gallery-grid">
-        {galleryItems.map((item, index) => (
-          <article key={`${item.title}-${index}`} className={`gallery-card ${item.className || ''}`}>
-            <img src={item.image} alt={item.title} loading="lazy" />
+        {galleryItems.map((item) => (
+          <article key={item.id || item.title} className={`gallery-card ${item.className || ''}`}>
+            <img src={getImageUrl(item.image)} alt={item.title} loading="lazy" />
             <div className="gallery-card__overlay">
               <strong>{item.title}</strong>
             </div>

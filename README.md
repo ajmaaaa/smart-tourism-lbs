@@ -20,7 +20,8 @@ A **Location-Based Service (LBS)** tourism website for Pulau Penyengat, built wi
 | Layer    | Technology                                   |
 | -------- | -------------------------------------------- |
 | Frontend | React 18, Vite 5, Leaflet 1.9                |
-| Backend  | Node.js 22, Express 4, Google Generative AI  |
+| Backend  | Node.js 22, Express 4, Prisma ORM, Google Generative AI |
+| Database | PostgreSQL                                   |
 | AI       | Gemini 2.5 Flash + manual RAG                |
 | Map      | Leaflet.js + OpenStreetMap (no Google Maps)  |
 
@@ -88,6 +89,14 @@ cd smart-tourism-lbs
 cd backend
 ```
 
+**Start PostgreSQL locally:**
+
+From the project root:
+
+```bash
+docker compose up -d postgres
+```
+
 **Install dependencies:**
 
 ```bash
@@ -115,6 +124,10 @@ NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
 GEMINI_API_KEY=your_gemini_api_key_here
 GEMINI_MODEL=gemini-2.5-flash
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/smart_tourism_lbs?schema=public"
+JWT_SECRET=change_this_to_a_long_random_secret
+ADMIN_EMAIL=admin@penyengat.local
+ADMIN_PASSWORD=admin123
 ```
 
 > Never commit your real API key to Git or share it publicly.
@@ -122,6 +135,9 @@ GEMINI_MODEL=gemini-2.5-flash
 **Start the backend:**
 
 ```bash
+npm run db:generate
+npm run db:migrate
+npm run db:seed
 npm run dev
 ```
 
@@ -163,6 +179,16 @@ npm run dev
 
 Frontend will run at: `http://localhost:3000`
 
+Admin dashboard:
+
+```txt
+URL: http://localhost:3000/admin
+Email: admin@penyengat.local
+Password: admin123
+```
+
+Change `ADMIN_EMAIL`, `ADMIN_PASSWORD`, and `JWT_SECRET` before deploying.
+
 ---
 
 ## Quick Reference
@@ -173,6 +199,47 @@ Frontend will run at: `http://localhost:3000`
 | `npm run dev`                   | Start development server           |
 | `npm run build`                 | Build frontend for production      |
 | `npm run start`                 | Start backend in production mode   |
+
+---
+
+## VPS Deployment with Docker Compose
+
+Prepare a VPS with Docker and Docker Compose, then copy this project to the server.
+
+Create production environment variables:
+
+```bash
+cp .env.production.example .env.production
+```
+
+Edit `.env.production` and set your real domain, Gemini API key, database password, JWT secret, and admin password.
+
+Build and start the app:
+
+```bash
+docker compose --env-file .env.production -f docker-compose.prod.yml up -d --build
+```
+
+Create database tables and seed once:
+
+```bash
+docker compose --env-file .env.production -f docker-compose.prod.yml exec backend npm run db:push
+docker compose --env-file .env.production -f docker-compose.prod.yml exec backend npm run db:seed
+```
+
+Open:
+
+```txt
+Website: http://your-vps-ip
+Admin: http://your-vps-ip/admin
+```
+
+After the domain DNS points to the VPS IP, use:
+
+```txt
+Website: https://your-domain.com
+Admin: https://your-domain.com/admin
+```
 
 ---
 
@@ -214,6 +281,13 @@ npm ci --no-audit --no-fund
 | GET    | `/api/health`         | Health check & model info    |
 | POST   | `/api/chat`           | Send message to AI assistant |
 | GET    | `/api/destinations`   | Get list of destinations     |
+| GET    | `/api/culture`        | Get Malay culture data       |
+| GET    | `/api/culinary`       | Get local cuisine data       |
+| GET    | `/api/gallery`        | Get gallery data             |
+| GET    | `/api/transportation` | Get access/transport data    |
+| GET    | `/api/faq`            | Get FAQ data                 |
+| GET    | `/api/history`        | Get history data             |
+| GET    | `/api/sources`        | Get source/reference data    |
 
 ---
 

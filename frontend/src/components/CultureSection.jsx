@@ -1,26 +1,36 @@
-import React from 'react'
-const budayaItems = [
-  { title: 'Pakaian Adat', desc: 'Pakaian tradisional Melayu yang dikenakan dalam berbagai upacara adat hingga saat ini.', image: '/images/budaya-pakaian.svg' },
-  { title: 'Tarian Tradisional', desc: 'Tarian Melayu yang anggun dan penuh makna budaya yang terus dilestarikan.', image: '/images/budaya-tarian.svg' },
-  { title: 'Gurindam Dua Belas', desc: 'Karya sastra Melayu karya Raja Ali Haji yang terkenal hingga mancanegara.', image: '/images/budaya-gurindam.svg' },
-  { title: 'Musik Tradisional', desc: 'Alat musik tradisional Melayu seperti gambus, kompang, dan gendang masih dimainkan.', image: '/images/budaya-musik.svg' }
+import React, { useEffect, useState } from 'react'
+import { fetchContent, getImageUrl } from '../services/contentService.js'
+
+const fallbackBudayaItems = [
+  { id: 'pakaian-adat', title: 'Pakaian Adat', summary: 'Pakaian tradisional Melayu yang dikenakan dalam berbagai upacara adat hingga saat ini.', image: '/images/budaya-pakaian.svg' },
+  { id: 'tarian-tradisional', title: 'Tarian Tradisional', summary: 'Tarian Melayu yang anggun dan penuh makna budaya yang terus dilestarikan.', image: '/images/budaya-tarian.svg' },
+  { id: 'gurindam-dua-belas', title: 'Gurindam Dua Belas', summary: 'Karya sastra Melayu karya Raja Ali Haji yang terkenal hingga mancanegara.', image: '/images/budaya-gurindam.svg' },
+  { id: 'musik-tradisional', title: 'Musik Tradisional', summary: 'Alat musik tradisional Melayu seperti gambus, kompang, dan gendang masih dimainkan.', image: '/images/budaya-musik.svg' }
 ]
 
 function CultureSection() {
+  const [budayaItems, setBudayaItems] = useState(fallbackBudayaItems)
+
+  useEffect(() => {
+    fetchContent('/api/culture', fallbackBudayaItems).then((items) => {
+      if (items.length) setBudayaItems(items)
+    })
+  }, [])
+
   return (
     <section id="budaya" className="section budaya-section">
       <SectionHeader badge="Tradisi" title="Budaya Melayu" desc="Warisan budaya yang terus hidup dan dijaga oleh masyarakat Pulau Penyengat." />
 
       <div className="budaya-grid">
         {budayaItems.map((item) => (
-          <article className="budaya-card" key={item.title}>
+          <article className="budaya-card" key={item.id || item.title}>
             <div className="budaya-card__visual image-visual">
-              <img src={item.image} alt={item.title} loading="lazy" />
+              <img src={getImageUrl(item.image)} alt={item.title} loading="lazy" />
               <small>{item.title}</small>
             </div>
             <div className="budaya-card__body">
               <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <p>{item.summary || item.description}</p>
             </div>
           </article>
         ))}

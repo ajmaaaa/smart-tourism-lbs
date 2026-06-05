@@ -1,5 +1,6 @@
-import React from 'react'
-import { destinations } from '../data/destinations.js'
+import React, { useEffect, useState } from 'react'
+import { destinations as fallbackDestinations } from '../data/destinations.js'
+import { fetchContent, getImageUrl } from '../services/contentService.js'
 
 const fallbackImages = {
   'masjid-raya-sultan-riau': '/images/masjid.svg',
@@ -9,6 +10,14 @@ const fallbackImages = {
 }
 
 function DestinationSection() {
+  const [destinations, setDestinations] = useState(fallbackDestinations)
+
+  useEffect(() => {
+    fetchContent('/api/destinations', fallbackDestinations).then((items) => {
+      if (items.length) setDestinations(items)
+    })
+  }, [])
+
   const showInHeroMap = (destId) => {
     window.dispatchEvent(new CustomEvent('select-destination', { detail: { destId } }))
     const el = document.getElementById('beranda')
@@ -24,7 +33,7 @@ function DestinationSection() {
           <article key={dest.id} className="destination-card">
             <div className="destination-card__visual image-visual">
               <img
-                src={fallbackImages[dest.id] || dest.image}
+                src={fallbackImages[dest.id] || getImageUrl(dest.image)}
                 alt={dest.name}
                 loading="lazy"
                 onError={(e) => { e.currentTarget.src = fallbackImages[dest.id] || '/images/gallery-laut.svg' }}

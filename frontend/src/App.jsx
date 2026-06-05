@@ -8,8 +8,13 @@ import CulinarySection from './components/CulinarySection.jsx'
 import GallerySection from './components/GallerySection.jsx'
 import ContactSection from './components/ContactSection.jsx'
 import ChatWidget from './components/ChatWidget.jsx'
+import AdminDashboard from './components/AdminDashboard.jsx'
 
 function App() {
+  if (window.location.pathname.startsWith('/admin')) {
+    return <AdminDashboard />
+  }
+
   return (
     <>
       <Navbar />

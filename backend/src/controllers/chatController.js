@@ -10,7 +10,7 @@ export async function sendMessage(req, res) {
     }
 
     console.log(`💬 Pesan masuk: "${message.slice(0, 80)}..."`)
-    const contextItems = searchKnowledgeBase(message)
+    const contextItems = await searchKnowledgeBase(message)
     console.log(`📚 RAG: ${contextItems.length} dokumen ditemukan`)
 
     const reply = await aiService.chat({ message, history, contextItems })
