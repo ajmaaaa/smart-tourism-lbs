@@ -6,7 +6,11 @@ import { findNearestNode } from '../utils/astar.js'
 import { routeNodes } from '../data/routeGraph.js'
 import '../styles/hero.css'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API_BASE = import.meta.env.VITE_API_URL && import.meta.env.VITE_API_URL !== 'http://localhost:5000'
+  ? (import.meta.env.VITE_API_URL.endsWith('/api') ? import.meta.env.VITE_API_URL : `${import.meta.env.VITE_API_URL}/api`)
+  : (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+      ? 'http://localhost:5000/api'
+      : '/api');
 
 async function fetchRoute(start, destination) {
   const fromLat = start.lat
