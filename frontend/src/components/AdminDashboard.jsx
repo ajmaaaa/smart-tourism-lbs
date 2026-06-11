@@ -107,8 +107,8 @@ function toFormValue(item, resource) {
 
 function AdminDashboard() {
   const [token, setToken] = useState(getAdminToken())
-  const [email, setEmail] = useState('admin@penyengat.local')
-  const [password, setPassword] = useState('admin123')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [active, setActive] = useState(resources[0].id)
   const [items, setItems] = useState([])
   const [form, setForm] = useState(() => toFormValue(null, resources[0].id))
