@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar.jsx'
 import HeroSection from './components/HeroSection.jsx'
 import AboutSection from './components/AboutSection.jsx'
+import VisitorGuideSection from './components/VisitorGuideSection.jsx'
 import CultureSection from './components/CultureSection.jsx'
 import DestinationSection from './components/DestinationSection.jsx'
 import CulinarySection from './components/CulinarySection.jsx'
@@ -21,6 +22,7 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <VisitorGuideSection />
         <CultureSection />
         <DestinationSection />
         <CulinarySection />

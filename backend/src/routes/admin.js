@@ -163,48 +163,68 @@ router.get('/me', requireAdmin, (req, res) => {
 })
 
 router.get('/:resource', requireAdmin, async (req, res) => {
-  const config = getResource(req, res)
-  if (!config) return
+  try {
+    const config = getResource(req, res)
+    if (!config) return
 
-  const prisma = getPrisma()
-  const data = await prisma[config.model].findMany({ orderBy: config.orderBy })
-  res.json({ data })
+    const prisma = getPrisma()
+    const data = await prisma[config.model].findMany({ orderBy: config.orderBy })
+    res.json({ data })
+  } catch (error) {
+    console.error(`Gagal mengambil data resource ${req.params.resource}:`, error)
+    res.status(500).json({ error: 'Gagal mengambil data dari database' })
+  }
 })
 
 router.post('/:resource', requireAdmin, async (req, res) => {
-  const config = getResource(req, res)
-  if (!config) return
+  try {
+    const config = getResource(req, res)
+    if (!config) return
 
-  const data = config.normalize(req.body)
-  if (!data.id) return res.status(400).json({ error: 'ID wajib diisi' })
+    const data = config.normalize(req.body)
+    if (!data.id) return res.status(400).json({ error: 'ID wajib diisi' })
 
-  const prisma = getPrisma()
-  const item = await prisma[config.model].create({ data })
-  res.status(201).json({ data: item })
+    const prisma = getPrisma()
+    const item = await prisma[config.model].create({ data })
+    res.status(201).json({ data: item })
+  } catch (error) {
+    console.error(`Gagal membuat data resource ${req.params.resource}:`, error)
+    res.status(500).json({ error: 'Gagal menyimpan data ke database. Pastikan ID unik.' })
+  }
 })
 
 router.put('/:resource/:id', requireAdmin, async (req, res) => {
-  const config = getResource(req, res)
-  if (!config) return
+  try {
+    const config = getResource(req, res)
+    if (!config) return
 
-  const data = config.normalize({ ...req.body, id: req.params.id })
-  delete data.id
+    const data = config.normalize({ ...req.body, id: req.params.id })
+    delete data.id
 
-  const prisma = getPrisma()
-  const item = await prisma[config.model].update({
-    where: { id: req.params.id },
-    data
-  })
-  res.json({ data: item })
+    const prisma = getPrisma()
+    const item = await prisma[config.model].update({
+      where: { id: req.params.id },
+      data
+    })
+    res.json({ data: item })
+  } catch (error) {
+    console.error(`Gagal memperbarui data resource ${req.params.resource} dengan ID ${req.params.id}:`, error)
+    res.status(500).json({ error: 'Gagal memperbarui data di database' })
+  }
 })
 
 router.delete('/:resource/:id', requireAdmin, async (req, res) => {
-  const config = getResource(req, res)
-  if (!config) return
+  try {
+    const config = getResource(req, res)
+    if (!config) return
 
-  const prisma = getPrisma()
-  await prisma[config.model].delete({ where: { id: req.params.id } })
-  res.status(204).send()
+    const prisma = getPrisma()
+    await prisma[config.model].delete({ where: { id: req.params.id } })
+    res.status(204).send()
+  } catch (error) {
+    console.error(`Gagal menghapus data resource ${req.params.resource} dengan ID ${req.params.id}:`, error)
+    res.status(500).json({ error: 'Gagal menghapus data dari database' })
+  }
 })
 
 export default router

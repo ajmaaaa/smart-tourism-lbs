@@ -1,41 +1,44 @@
 import React from 'react'
+
 function ContactSection() {
   return (
     <>
       <section id="kontak" className="section contact-page-section">
-        <div className="section-heading">
-          <span className="section-badge"><span /> Kontak</span>
-          <h2 className="section-title">Kontak & Kritik Saran</h2>
-          <div className="gold-divider"><span>✦</span></div>
-          <p>Ada pertanyaan atau masukan? Kami senang mendengar dari Anda.</p>
-        </div>
-
         <div className="contact-layout">
           <div className="contact-info">
-            <h3>Hubungi Kami</h3>
+            <span className="section-badge"><span /> Informasi</span>
+            <h2 className="section-title section-title--left">Butuh bantuan saat merencanakan kunjungan?</h2>
             <div className="gold-divider gold-divider--left"><span>✦</span></div>
-            <ContactItem icon="📍" text="Pulau Penyengat, Tanjungpinang, Kepulauan Riau" />
-            <ContactItem icon="📞" text="+62 812-3456-7890" />
-            <ContactItem icon="✉️" text="info@explorepenyengat.id" />
-            <ContactItem icon="📷" text="@explorepenyengat" />
-            <ContactItem icon="🌐" text="explorepenyengat" />
-            <div className="contact-socials">
-              <span>f</span><span>ig</span><span>tt</span><span>yt</span>
+            <p>Gunakan asisten wisata untuk memperoleh jawaban cepat mengenai destinasi, sejarah, transportasi, atau rekomendasi rute di Pulau Penyengat.</p>
+
+            <div className="contact-info__list">
+              <ContactItem icon="⌖" title="Lokasi" text="Pulau Penyengat, Kota Tanjungpinang, Kepulauan Riau" />
+              <ContactItem icon="↝" title="Akses utama" text="Pompong dari dermaga Tanjungpinang menuju Pulau Penyengat" />
+              <ContactItem icon="✦" title="Asisten wisata" text="Pak Cik Penyengat siap membantu melalui tombol chatbot" />
             </div>
+
+            <button className="btn-primary" type="button" onClick={() => window.dispatchEvent(new CustomEvent('open-chat'))}>
+              Tanya Pak Cik <span>↗</span>
+            </button>
           </div>
 
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+            <div className="contact-form__heading">
+              <small>Kritik & saran</small>
+              <h3>Bantu kami meningkatkan layanan</h3>
+              <p>Formulir ini dapat dihubungkan ke backend saat kanal penerima masukan sudah ditentukan.</p>
+            </div>
             <label>
-              <span>Nama Lengkap</span>
-              <input placeholder="Masukkan nama Anda" />
+              <span>Nama</span>
+              <input name="name" placeholder="Masukkan nama Anda" />
             </label>
             <label>
               <span>Email</span>
-              <input type="email" placeholder="email@contoh.com" />
+              <input name="email" type="email" placeholder="nama@email.com" />
             </label>
             <label>
-              <span>Pesan / Kritik & Saran</span>
-              <textarea placeholder="Tuliskan pesan atau saran Anda..." rows="5" />
+              <span>Pesan</span>
+              <textarea name="message" placeholder="Tuliskan kritik atau saran Anda..." rows="5" />
             </label>
             <button className="btn-primary" type="submit">Kirim Pesan</button>
           </form>
@@ -43,53 +46,52 @@ function ContactSection() {
       </section>
 
       <footer className="footer-section">
+        <div className="footer-motif" aria-hidden="true" />
         <div className="footer-grid">
-          <div>
+          <div className="footer-intro">
             <div className="footer-brand">
-              <span>🕌</span>
+              <img src="/penyengat-mark.svg" alt="" />
               <div>
-                <small>Explore</small>
-                <strong>Penyengat</strong>
+                <small>Wisata Melayu</small>
+                <strong>Explore Penyengat</strong>
               </div>
             </div>
-            <p>Jelajahi keindahan wisata sejarah dan budaya Melayu di Pulau Penyengat, permata Kepulauan Riau.</p>
-            <div className="footer-socials"><span>f</span><span>ig</span><span>tt</span><span>yt</span></div>
+            <p>Panduan digital untuk menjelajahi wisata sejarah, budaya Melayu, dan rute perjalanan di Pulau Penyengat.</p>
           </div>
 
           <div>
-            <h4>Menu</h4>
-            <a href="#beranda">Beranda</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#budaya">Budaya</a>
-            <a href="#destinasi">Wisata</a>
-            <a href="#kuliner">Kuliner</a>
-            <a href="#galeri">Galeri</a>
-            <a href="#kontak">Kontak</a>
+            <h4>Jelajahi</h4>
+            <a href="#tentang">Tentang Pulau</a>
+            <a href="#panduan">Panduan Kunjungan</a>
+            <a href="#destinasi">Destinasi Wisata</a>
+            <a href="#budaya">Budaya Melayu</a>
           </div>
 
           <div>
-            <h4>Destinasi</h4>
-            <a href="#beranda">Masjid Raya Sultan Riau</a>
-            <a href="#beranda">Benteng Bukit Kursi</a>
-            <a href="#beranda">Makam Raja Ali Haji</a>
-            <a href="#beranda">Balai Adat</a>
-            <a href="#beranda">Istana Kantor</a>
+            <h4>Fitur</h4>
+            <a href="#beranda">Peta Interaktif</a>
+            <a href="#beranda">Rute A*</a>
+            <button type="button" onClick={() => window.dispatchEvent(new CustomEvent('open-chat'))}>Asisten Pak Cik</button>
+            <a href="#galeri">Galeri Foto</a>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Explore Penyengat. All Rights Reserved.</span>
-          <span>Made with love in Tanjungpinang</span>
+          <span>© 2026 Explore Penyengat</span>
+          <span>Smart Tourism LBS Pulau Penyengat</span>
         </div>
       </footer>
     </>
   )
 }
 
-function ContactItem({ icon, text }) {
+function ContactItem({ icon, title, text }) {
   return (
     <div className="contact-item">
       <span>{icon}</span>
-      <p>{text}</p>
+      <div>
+        <strong>{title}</strong>
+        <p>{text}</p>
+      </div>
     </div>
   )
 }

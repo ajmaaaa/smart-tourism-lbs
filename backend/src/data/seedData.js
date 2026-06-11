@@ -87,85 +87,146 @@ export const destinations = [
 
 export const cultures = [
   {
-    id: 'pakaian-adat',
-    title: 'Pakaian Adat',
-    category: 'Adat',
-    summary: 'Pakaian tradisional Melayu yang dikenakan dalam berbagai upacara adat hingga saat ini.',
-    image: '/images/budaya-pakaian.svg',
+    id: 'pakaian-adat-melayu',
+    title: 'Pakaian Adat Melayu',
+    category: 'Budaya',
+    summary: 'Pakaian adat Melayu seperti Baju Kurung, Teluk Belanga, dan songket mencerminkan identitas budaya masyarakat Melayu.',
+    description:
+      'Pakaian adat Melayu terdiri dari berbagai busana tradisional seperti Baju Kurung untuk perempuan, Baju Teluk Belanga untuk laki-laki, kain songket, serta tanjak sebagai pelengkap. Busana ini melambangkan kesopanan, kehormatan, dan identitas budaya masyarakat Melayu yang masih dilestarikan hingga sekarang.',
+    image: '/images/pakaian-adat-melayu.jpg',
     icon: 'adat',
-    keywords: ['pakaian adat', 'melayu', 'upacara adat'],
+    keywords: ['pakaian adat', 'melayu', 'baju kurung', 'teluk belanga', 'songket'],
     sortOrder: 1
   },
+
   {
     id: 'tarian-tradisional',
     title: 'Tarian Tradisional',
     category: 'Seni',
-    summary: 'Tarian Melayu yang anggun dan penuh makna budaya yang terus dilestarikan.',
-    image: '/images/budaya-tarian.svg',
+    summary: 'Tarian khas Melayu seperti Tari Zapin, Tari Persembahan, dan Joget Melayu menjadi bagian penting budaya Melayu.',
+    description:
+      'Tarian tradisional Melayu memiliki gerakan yang anggun dan penuh makna budaya. Beberapa tarian terkenal seperti Tari Zapin bernuansa Islami, Tari Persembahan untuk penyambutan tamu kehormatan, dan Tari Joget Melayu yang menggambarkan kebersamaan masyarakat.',
+    image: '/images/tarian-tradisional.jpg',
     icon: 'tari',
-    keywords: ['tarian', 'seni', 'budaya melayu'],
+    keywords: ['tarian', 'zapin', 'joget melayu', 'tari persembahan', 'budaya melayu'],
     sortOrder: 2
   },
+
   {
     id: 'gurindam-dua-belas',
     title: 'Gurindam Dua Belas',
     category: 'Sastra',
-    summary: 'Karya sastra Melayu dari Raja Ali Haji yang berisi nilai moral, agama, dan kehidupan.',
-    image: '/images/budaya-gurindam.svg',
+    summary: 'Warisan sastra Melayu karya Raja Ali Haji yang berisi nilai moral, agama, dan kehidupan.',
+    description:
+      'Gurindam Dua Belas merupakan karya sastra terkenal ciptaan Raja Ali Haji yang terdiri dari dua belas pasal berisi nasihat moral, pendidikan, agama, dan kehidupan sosial. Karya ini menjadi simbol perkembangan sastra Melayu di Pulau Penyengat.',
+    image: '/images/gurindam-dua-belas.jpg',
     icon: 'sastra',
     keywords: ['gurindam', 'sastra', 'raja ali haji', 'melayu'],
     sortOrder: 3
   },
+
   {
     id: 'musik-tradisional',
     title: 'Musik Tradisional',
     category: 'Seni',
-    summary: 'Alat musik tradisional Melayu seperti gambus, kompang, dan gendang masih dimainkan.',
-    image: '/images/budaya-musik.svg',
+    summary: 'Musik tradisional Melayu seperti gambus, rebana, kompang, dan gendang masih dimainkan hingga kini.',
+    description:
+      'Musik tradisional Melayu menjadi bagian penting dalam budaya masyarakat. Alat musik seperti gambus, rebana, kompang, dan gendang digunakan untuk mengiringi tarian, upacara adat, hingga kegiatan keagamaan.',
+    image: '/images/musik-tradisional.jpg',
     icon: 'musik',
-    keywords: ['musik', 'gambus', 'kompang', 'gendang'],
+    keywords: ['musik', 'gambus', 'kompang', 'gendang', 'rebana'],
     sortOrder: 4
+  },
+
+  {
+    id: 'balai-adat-melayu',
+    title: 'Balai Adat Melayu',
+    category: 'Budaya',
+    summary: 'Tempat pelestarian budaya Melayu yang menampilkan pakaian adat, pelaminan, dan artefak kesultanan.',
+    description:
+      'Balai Adat Melayu merupakan bangunan budaya yang difungsikan untuk melestarikan pakaian adat Melayu, replika pelaminan bersulam emas, serta berbagai artefak Kesultanan Melayu. Tempat ini menjadi simbol keagungan tradisi dan warisan budaya masyarakat Pulau Penyengat.',
+    image: '/images/balai-adat-melayu.jpg',
+    icon: 'budaya',
+    keywords: ['balai adat', 'budaya', 'melayu', 'tradisi'],
+    sortOrder: 5
+  },
+
+  {
+    id: 'pelaminan-bersulam-emas',
+    title: 'Pelaminan Bersulam Emas',
+    category: 'Budaya',
+    summary: 'Pelaminan adat Melayu dengan sulaman emas yang melambangkan kemewahan dan kehormatan tradisi.',
+    description:
+      'Pelaminan Bersulam Emas merupakan replika pelaminan adat Melayu yang dipamerkan di Balai Adat Melayu. Hiasan sulaman emas menunjukkan kemewahan dan keagungan budaya Melayu dalam upacara adat pernikahan.',
+    image: '/images/pelaminan-bersulam-emas.jpg',
+    icon: 'adat',
+    keywords: ['pelaminan', 'emas', 'budaya', 'melayu'],
+    sortOrder: 6
   }
-]
+];
 
 export const culinaryItems = [
   {
     id: 'gonggong',
     title: 'Gonggong',
     category: 'Makanan Laut',
-    summary: 'Siput laut khas yang diolah dengan bumbu pedas gurih, ikon kuliner Kepulauan Riau.',
-    image: '/images/gonggong.svg',
-    keywords: ['gonggong', 'siput laut', 'kuliner', 'kepulauan riau'],
+    summary: 'Kuliner khas Kepulauan Riau berupa siput laut yang direbus dan disajikan dengan sambal.',
+    description:
+      'Gonggong merupakan makanan khas Kepulauan Riau yang sangat populer di Pulau Penyengat dan Tanjungpinang. Makanan ini berupa siput laut yang direbus hingga matang dan biasanya disajikan bersama sambal pedas atau saus khas.',
+    image: '/images/gonggong.jpg',
+    keywords: ['gonggong', 'makanan laut', 'kuliner melayu', 'kepulauan riau'],
     sortOrder: 1
   },
+
   {
     id: 'lakse',
     title: 'Lakse',
     category: 'Makanan Melayu',
-    summary: 'Mie khas Melayu dengan kuah santan yang gurih dan kaya rempah pilihan.',
-    image: '/images/lakse.svg',
-    keywords: ['lakse', 'mie', 'santan', 'melayu'],
+    summary: 'Makanan tradisional Melayu berbahan dasar mie tepung sagu dengan kuah gurih kaya rempah.',
+    description:
+      'Lakse merupakan kuliner khas Melayu yang terbuat dari mie berbahan tepung sagu dan disajikan menggunakan kuah santan atau kuah ikan yang gurih. Hidangan ini mencerminkan cita rasa khas Melayu.',
+    image: '/images/lakse.jpg',
+    keywords: ['lakse', 'makanan melayu', 'kuliner', 'mie sagu'],
     sortOrder: 2
   },
+
   {
     id: 'otak-otak',
     title: 'Otak-otak',
     category: 'Makanan Ikan',
-    summary: 'Ikan tenggiri segar dibungkus daun pisang lalu dibakar hingga harum sempurna.',
-    image: '/images/otak-otak.svg',
-    keywords: ['otak-otak', 'ikan tenggiri', 'daun pisang'],
+    summary: 'Olahan ikan berbumbu khas Melayu yang dibungkus daun pisang lalu dibakar hingga harum.',
+    description:
+      'Otak-otak merupakan makanan khas berbahan dasar ikan yang dicampur rempah-rempah, kemudian dibungkus daun pisang dan dipanggang. Kuliner ini memiliki cita rasa gurih dan sering dijadikan camilan khas Melayu.',
+    image: '/images/otak-otak.jpg',
+    keywords: ['otak-otak', 'ikan', 'kuliner melayu', 'makanan khas'],
     sortOrder: 3
   },
+
   {
     id: 'nasi-dagang',
     title: 'Nasi Dagang',
     category: 'Makanan Melayu',
-    summary: 'Nasi khas Melayu yang disajikan dengan lauk ikan dan kuah gulai yang sedap.',
-    image: '/images/nasi-dagang.svg',
-    keywords: ['nasi dagang', 'gulai', 'melayu'],
+    summary: 'Hidangan khas Melayu berupa nasi gurih dengan lauk ikan berbumbu rempah.',
+    description:
+      'Nasi Dagang adalah makanan tradisional Melayu yang terdiri dari nasi gurih dengan lauk seperti ikan tongkol berbumbu, sambal, dan pelengkap lainnya. Hidangan ini terkenal dengan cita rasa rempah yang khas.',
+    image: '/images/nasi-dagang.jpg',
+    keywords: ['nasi dagang', 'makanan melayu', 'kuliner khas', 'melayu'],
     sortOrder: 4
+  },
+
+  {
+    id: 'kue-deram-deram',
+    title: 'Kue Deram-Deram',
+    category: 'Makanan Melayu',
+    summary: 'Kue tradisional Melayu berbentuk cincin dengan rasa manis dan tekstur renyah di luar.',
+    description:
+      'Kue Deram-Deram merupakan salah satu makanan tradisional khas Melayu yang populer di Kepulauan Riau. Kue ini dibuat dari tepung dan gula merah, kemudian digoreng hingga kecokelatan. Rasanya manis dengan tekstur renyah di luar dan lembut di dalam.',
+    image: '/images/kue-deram-deram.jpg',
+    keywords: ['kue deram-deram', 'kuliner melayu', 'kue tradisional', 'kepulauan riau'],
+    sortOrder: 5
   }
-]
+];
+
 
 export const galleryItems = [
   { id: 'galeri-masjid', title: 'Masjid Sultan Riau', image: '/images/gallery-masjid.svg', className: 'tall', category: 'Religi', sortOrder: 1 },

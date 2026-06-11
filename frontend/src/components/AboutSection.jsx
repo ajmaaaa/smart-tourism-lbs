@@ -1,10 +1,11 @@
 import React from 'react'
+
 function AboutSection() {
   const items = [
-    { title: 'Sejarah', desc: 'Warisan Kerajaan Riau-Lingga', icon: '🏛️' },
-    { title: 'Budaya', desc: 'Pusat kebudayaan Melayu', icon: '🎭' },
-    { title: 'Wisata', desc: 'Destinasi menarik beragam', icon: '🗺️' },
-    { title: 'Kuliner', desc: 'Aneka makanan khas Melayu', icon: '🍽️' }
+    { title: 'Sejarah', desc: 'Jejak Kesultanan Riau-Lingga', icon: '⌂' },
+    { title: 'Budaya', desc: 'Tradisi Melayu yang tetap hidup', icon: '✦' },
+    { title: 'Wisata', desc: 'Situs bersejarah dalam satu pulau', icon: '⌖' },
+    { title: 'Kuliner', desc: 'Cita rasa khas Kepulauan Riau', icon: '◌' }
   ]
 
   return (
@@ -12,26 +13,28 @@ function AboutSection() {
       <div className="about-layout">
         <div className="about-visual-card">
           <div className="about-visual-card__image">
-            <img src="/images/penyengat-about.svg" alt="Ilustrasi Pulau Penyengat" />
-            <span>Pulau Penyengat dari udara</span>
+            <img src="/images/penyengat-about.svg" alt="Ilustrasi suasana Pulau Penyengat" loading="lazy" />
+          </div>
+          <div className="about-visual-card__caption">
+            <span>Permata sejarah Melayu</span>
+            <strong>Pulau Penyengat</strong>
           </div>
           <div className="about-badge">
-            <span>🏅</span>
+            <span>✦</span>
             <div>
-              <strong>UNESCO</strong>
-              <small>Warisan Budaya</small>
+              <strong>Warisan Melayu</strong>
+              <small>Sejarah, religi, dan budaya</small>
             </div>
           </div>
         </div>
 
         <div className="about-content">
-          <SectionLabel text="Tentang" />
-          <h2 className="section-title section-title--left">Tentang Pulau Penyengat</h2>
+          <SectionLabel text="Mengenal Penyengat" />
+          <h2 className="section-title section-title--left">Pulau kecil dengan cerita yang besar</h2>
           <GoldDivider align="left" />
 
-          <p>Pulau Penyengat merupakan pulau kecil yang berada di Kota Tanjungpinang, Kepulauan Riau. Pulau ini merupakan pusat kebudayaan Melayu dan memiliki nilai sejarah yang tinggi bagi Kerajaan Riau-Lingga.</p>
-          <p>Di pulau ini terdapat banyak peninggalan sejarah seperti Masjid Raya Sultan Riau, Makam Raja Ali Haji, Benteng Bukit Kursi, dan berbagai situs bersejarah lainnya.</p>
-          <p>Pulau Penyengat menjadi destinasi wisata yang menarik bagi wisatawan yang ingin mengenal lebih dekat sejarah dan budaya Melayu.</p>
+          <p>Pulau Penyengat berada di Kota Tanjungpinang, Kepulauan Riau. Pulau ini menyimpan jejak penting Kesultanan Riau-Lingga serta perkembangan bahasa, sastra, dan kebudayaan Melayu.</p>
+          <p>Dalam satu perjalanan, wisatawan dapat mengunjungi masjid bersejarah, makam tokoh Melayu, benteng pertahanan, bangunan lama, dan ruang budaya masyarakat setempat.</p>
 
           <div className="about-mini-grid">
             {items.map((item) => (

@@ -278,39 +278,44 @@ function HeroSection() {
   return (
     <section id="beranda" className="hero">
       <div className="hero__shade" />
+      <div className="hero__motif" aria-hidden="true" />
 
       <div className="hero__inner">
         <div className="hero__content">
           <div className="hero__eyebrow">
             <span>✦</span>
-            Pulau wisata bersejarah
+            Wisata sejarah dan budaya Melayu
           </div>
 
-          <span className="hero__label">Jelajahi</span>
-          <h1 className="hero__title">Pulau<br />Penyengat</h1>
+          <span className="hero__label">Selamat datang di</span>
+          <h1 className="hero__title">Pulau<br /><em>Penyengat</em></h1>
 
           <p className="hero__desc">
-            Temukan destinasi sejarah, budaya Melayu, kuliner lokal, dan rute wisata cerdas
-            berbasis Location Based Service di Pulau Penyengat.
+            Jelajahi peninggalan Kesultanan Riau-Lingga, budaya Melayu, kuliner lokal,
+            dan rute wisata cerdas dalam satu panduan yang mudah digunakan.
           </p>
 
           <div className="hero__actions">
-            <button className="btn-primary" onClick={() => scrollToSection('destinasi')}>Jelajahi Sekarang</button>
-            <button className="btn-secondary hero__btn-secondary" onClick={() => scrollToSection('tentang')}>Tentang Project</button>
+            <button className="btn-primary" type="button" onClick={() => scrollToSection('destinasi')}>
+              Lihat Destinasi <span>↗</span>
+            </button>
+            <button className="btn-secondary hero__btn-secondary" type="button" onClick={() => scrollToSection('panduan')}>
+              Panduan Kunjungan
+            </button>
           </div>
 
-          <div className="hero__stats">
-            <div className="hero__stat">
-              <span className="hero__stat-num">{destinations.length}<span>+</span></span>
-              <span className="hero__stat-label">Destinasi</span>
+          <div className="hero__facts" aria-label="Ringkasan fitur">
+            <div className="hero__fact">
+              <span>↝</span>
+              <div><strong>±15 menit</strong><small>penyeberangan pompong</small></div>
             </div>
-            <div className="hero__stat">
-              <span className="hero__stat-num">A<span>*</span></span>
-              <span className="hero__stat-label">Rute Cerdas</span>
+            <div className="hero__fact">
+              <span>⌖</span>
+              <div><strong>Rute A*</strong><small>navigasi antardestinasi</small></div>
             </div>
-            <div className="hero__stat">
-              <span className="hero__stat-num">AI</span>
-              <span className="hero__stat-label">Asisten Wisata</span>
+            <div className="hero__fact">
+              <span>✦</span>
+              <div><strong>Pak Cik</strong><small>asisten wisata berbasis AI</small></div>
             </div>
           </div>
         </div>
@@ -319,19 +324,22 @@ function HeroSection() {
           <div className="hero__map-card">
             <div className="hero__map-header">
               <div>
-                <span className="hero__map-kicker">Peta & Rekomendasi</span>
-                <h2>Pulau Penyengat</h2>
+                <span className="hero__map-kicker">Peta Interaktif</span>
+                <h2>Temukan rute wisata Anda</h2>
               </div>
-              <span className="hero__live-badge"><span /> Live Map</span>
+              <span className="hero__live-badge"><span /> LBS Aktif</span>
             </div>
 
             <div className="hero__search-row">
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Cari masjid, makam, benteng..."
-                aria-label="Cari destinasi"
-              />
+              <label className="hero__search-input">
+                <span>⌕</span>
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Cari masjid, makam, benteng..."
+                  aria-label="Cari destinasi"
+                />
+              </label>
               <button type="button" onClick={startLocate} className={locError ? 'is-error' : ''}>
                 {locating ? 'Melacak...' : locError ? 'Coba Lagi' : 'Lacak Posisi'}
               </button>
@@ -341,7 +349,7 @@ function HeroSection() {
 
             <div className="hero__route-panel">
               <div>
-                <span>Tujuan aktif</span>
+                <span>Tujuan yang dipilih</span>
                 <strong>{selectedDestination.name}</strong>
               </div>
               <button type="button" onClick={createRoute}>Buat Rute A*</button>
@@ -380,6 +388,11 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
+      <button className="hero__scroll" type="button" onClick={() => scrollToSection('tentang')} aria-label="Lanjut ke bagian tentang">
+        <span>Gulir untuk menjelajah</span>
+        <strong>↓</strong>
+      </button>
     </section>
   )
 }
@@ -387,10 +400,10 @@ function HeroSection() {
 function getDestinationIcon(category) {
   if (category === 'Religi') return '🕌'
   if (category === 'Sejarah') return '🏛️'
-  if (category === 'Budaya') return '🎭'
+  if (category === 'Budaya') return '✦'
   if (category === 'Transportasi') return '⛵'
-  if (category === 'Alam') return '🌊'
-  return '📍'
+  if (category === 'Alam') return '≈'
+  return '⌖'
 }
 
 export default HeroSection

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "dermaga-penyeberangan-tanjungpinang",
+    "title": "Dermaga Penyeberangan dari Tanjungpinang",
+    "type": "transportation",
+    "category": "Akses Laut",
+    "summary": "Penyeberangan menuju Pulau Penyengat dimulai dari dermaga penyeberangan di pusat Kota Tanjungpinang.",
+    "description": "Pulau Penyengat berada sekitar 1,8–2 kilometer dari pusat Kota Tanjungpinang. Wisatawan menuju pulau menggunakan pompong atau perahu motor dari dermaga penyeberangan menuju Pelabuhan Penyengat.",
+    "keywords": [
+      "dermaga",
+      "pelantar kuning",
+      "tanjungpinang",
+      "pelabuhan penyengat",
+      "akses laut"
+    ]
+  },
+  {
+    "id": "pompong-tanjungpinang",
+    "title": "Pompong Tanjungpinang–Pulau Penyengat",
+    "type": "transportation",
+    "category": "Akses Laut",
+    "summary": "Pompong atau perahu motor merupakan moda utama untuk mencapai Pulau Penyengat dengan waktu perjalanan sekitar 15 menit.",
+    "description": "Durasi penyeberangan dapat berubah mengikuti cuaca, kondisi perairan, dan aktivitas di dermaga. Tanyakan waktu keberangkatan terakhir kepada operator apabila berkunjung pada sore hari.",
+    "keywords": [
+      "pompong",
+      "perahu motor",
+      "15 menit",
+      "tanjungpinang",
+      "pelabuhan",
+      "penyeberangan"
+    ]
+  },
+  {
+    "id": "tarif-pompong-publikasi-2022",
+    "title": "Tarif Pompong Terakhir yang Dipublikasikan Pemerintah",
+    "type": "transportation",
+    "category": "Tarif",
+    "summary": "Tarif umum terakhir yang dipublikasikan Pemerintah Kota Tanjungpinang adalah Rp9.500 per orang sekali perjalanan dan tarif warga Penyengat Rp7.000 per orang sekali perjalanan, berlaku mulai 1 November 2022.",
+    "description": "Tarif tersebut sudah termasuk iuran wajib asuransi kecelakaan. Pemerintah menyebutkan bahwa tarif dapat dievaluasi berkala. Karena itu, wisatawan tetap perlu mengonfirmasi harga terbaru kepada petugas atau operator di dermaga sebelum berangkat.",
+    "keywords": [
+      "tarif pompong",
+      "rp9500",
+      "rp7000",
+      "harga kapal",
+      "asuransi",
+      "sk wali kota 581 tahun 2022"
+    ]
+  },
+  {
+    "id": "jalan-kaki-di-pulau",
+    "title": "Berjalan Kaki di Kawasan Wisata",
+    "type": "transportation",
+    "category": "Rute Lokal",
+    "summary": "Berjalan kaki cocok untuk menikmati kawasan bersejarah secara perlahan, terutama destinasi yang berada di sekitar dermaga dan Masjid Raya Sultan Riau.",
+    "description": "Gunakan alas kaki yang nyaman, bawa air minum, dan perhatikan kondisi jalan. Untuk titik yang lebih jauh atau ketika waktu terbatas, wisatawan dapat memakai jasa becak lokal.",
+    "keywords": [
+      "jalan kaki",
+      "rute lokal",
+      "mobilitas",
+      "destinasi",
+      "wisata sejarah"
+    ]
+  },
+  {
+    "id": "becak-lokal",
+    "title": "Becak Lokal untuk Berkeliling Pulau",
+    "type": "transportation",
+    "category": "Rute Lokal",
+    "summary": "Becak lokal dapat digunakan untuk mencapai sejumlah situs di Pulau Penyengat. Disbudpar Kota Tanjungpinang mencantumkan becak motor sebagai salah satu cara menuju Balai Adat.",
+    "description": "Sebelum perjalanan dimulai, wisatawan disarankan menanyakan rute, durasi, dan biaya kepada pengemudi. Moda ini membantu wisatawan yang ingin mengunjungi beberapa lokasi tanpa terlalu banyak berjalan kaki.",
+    "keywords": [
+      "becak",
+      "becak motor",
+      "bentor",
+      "balai adat",
+      "keliling pulau",
+      "transportasi lokal"
+    ]
+  },
+  {
+    "id": "becak-listrik-bentrik",
+    "title": "Becak Listrik atau Bentrik",
+    "type": "transportation",
+    "category": "Transportasi Ramah Lingkungan",
+    "summary": "Becak listrik digunakan sebagai salah satu pilihan untuk berkeliling Pulau Penyengat dan mendukung mobilitas wisata yang lebih ramah lingkungan.",
+    "description": "Pemerintah Provinsi Kepulauan Riau mencatat penggunaan becak listrik saat kunjungan resmi pada Mei 2024. Ketersediaan unit untuk wisatawan dapat berubah, sehingga tanyakan langsung kepada pengelola atau pengemudi setempat.",
+    "keywords": [
+      "becak listrik",
+      "bentrik",
+      "kendaraan listrik",
+      "ramah lingkungan",
+      "keliling pulau"
+    ]
+  },
+  {
+    "id": "keselamatan-penyeberangan",
+    "title": "Keselamatan Saat Menyeberang",
+    "type": "transportation",
+    "category": "Keselamatan",
+    "summary": "Perhatikan arahan operator sebelum naik pompong dan gunakan perlengkapan keselamatan yang tersedia.",
+    "description": "Cuaca dan kondisi perairan dapat memengaruhi penyeberangan. Wisatawan sebaiknya tidak memaksakan perjalanan apabila operator menyatakan kondisi kurang aman dan memastikan barang bawaan tersimpan dengan baik selama perjalanan.",
+    "keywords": [
+      "keselamatan",
+      "life jacket",
+      "cuaca",
+      "gelombang",
+      "pompong",
+      "operator"
+    ]
+  }
+]
