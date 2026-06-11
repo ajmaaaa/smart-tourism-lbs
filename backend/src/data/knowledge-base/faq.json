@@ -1,60 +1,195 @@
 [
   {
     "id": "akses-pompong",
-    "title": "Cara menuju Pulau Penyengat",
+    "title": "Bagaimana cara menuju Pulau Penyengat?",
     "type": "faq",
     "category": "Transportasi",
-    "summary": "Wisatawan umumnya menuju Pulau Penyengat dari Tanjungpinang menggunakan pompong. Waktu perjalanan singkat dan biaya dapat berubah sesuai kondisi setempat.",
+    "summary": "Pulau Penyengat dapat dicapai dari pusat Kota Tanjungpinang menggunakan pompong atau perahu motor menuju dermaga Pulau Penyengat. Waktu penyeberangan umumnya sekitar 15 menit, bergantung pada kondisi cuaca dan perairan.",
     "keywords": [
       "cara ke penyengat",
       "pompong",
-      "transportasi",
-      "tanjungpinang"
+      "perahu motor",
+      "dermaga",
+      "tanjungpinang",
+      "15 menit"
+    ]
+  },
+  {
+    "id": "tarif-pompong",
+    "title": "Berapa tarif pompong ke Pulau Penyengat?",
+    "type": "faq",
+    "category": "Transportasi",
+    "summary": "Tarif umum terakhir yang dipublikasikan Pemerintah Kota Tanjungpinang adalah Rp9.500 per orang untuk sekali perjalanan, berlaku mulai 1 November 2022 dan sudah termasuk iuran wajib asuransi kecelakaan. Karena tarif dapat dievaluasi berkala, konfirmasikan kembali kepada petugas atau operator di dermaga sebelum berangkat.",
+    "keywords": [
+      "tarif pompong",
+      "harga pompong",
+      "ongkos kapal",
+      "rp9500",
+      "biaya penyengat",
+      "asuransi"
+    ]
+  },
+  {
+    "id": "jadwal-pompong",
+    "title": "Apakah pompong memiliki jadwal keberangkatan tetap?",
+    "type": "faq",
+    "category": "Transportasi",
+    "summary": "Pompong melayani penyeberangan lokal Tanjungpinang–Pulau Penyengat. Waktu keberangkatan dapat menyesuaikan ketersediaan kapal, jumlah penumpang, cuaca, dan kondisi perairan. Wisatawan sebaiknya menanyakan keberangkatan terakhir kepada operator di dermaga, terutama jika berkunjung pada sore hari.",
+    "keywords": [
+      "jadwal pompong",
+      "keberangkatan terakhir",
+      "jam kapal",
+      "operator dermaga",
+      "cuaca"
+    ]
+  },
+  {
+    "id": "mobilitas-di-pulau",
+    "title": "Bagaimana cara berkeliling di Pulau Penyengat?",
+    "type": "faq",
+    "category": "Transportasi",
+    "summary": "Wisatawan dapat berjalan kaki untuk menikmati kawasan bersejarah atau memakai jasa becak lokal. Pulau Penyengat juga memiliki becak listrik atau bentrik sebagai pilihan mobilitas yang lebih ramah lingkungan. Tanyakan rute dan biaya kepada pengemudi sebelum perjalanan dimulai.",
+    "keywords": [
+      "keliling penyengat",
+      "jalan kaki",
+      "becak motor",
+      "becak listrik",
+      "bentrik",
+      "transportasi lokal"
+    ]
+  },
+  {
+    "id": "destinasi-utama",
+    "title": "Apa saja destinasi utama yang dapat dikunjungi?",
+    "type": "faq",
+    "category": "Wisata",
+    "summary": "Destinasi penting di Pulau Penyengat antara lain Masjid Raya Sultan Riau, kompleks makam Engku Puteri Raja Hamidah dan Raja Ali Haji, makam Raja Haji Fisabilillah, Istana Kantor, Benteng Bukit Kursi, Gedung Mesiu, Gedung Tabib, Gedung Engku Bilik, dan Balai Adat Melayu.",
+    "keywords": [
+      "destinasi utama",
+      "wisata sejarah",
+      "masjid sultan riau",
+      "raja ali haji",
+      "benteng bukit kursi",
+      "balai adat"
+    ]
+  },
+  {
+    "id": "durasi-kunjungan",
+    "title": "Berapa lama waktu yang disarankan untuk berwisata?",
+    "type": "faq",
+    "category": "Wisata",
+    "summary": "Untuk kunjungan singkat, siapkan sekitar 2–3 jam agar dapat melihat beberapa situs utama di sekitar dermaga dan masjid. Jika ingin mengunjungi lebih banyak makam, bangunan peninggalan, dan Benteng Bukit Kursi dengan ritme santai, alokasikan setengah hari.",
+    "keywords": [
+      "durasi wisata",
+      "berapa jam",
+      "setengah hari",
+      "rute wisata",
+      "kunjungan singkat"
+    ]
+  },
+  {
+    "id": "biaya-masuk",
+    "title": "Apakah ada tiket masuk ke Pulau Penyengat?",
+    "type": "faq",
+    "category": "Wisata",
+    "summary": "Laman Disbudpar Kota Tanjungpinang mencantumkan biaya masuk Pulau Penyengat dan Balai Adat sebesar Rp0. Namun, siapkan uang tunai untuk pompong, transportasi lokal, makanan, suvenir, dan kemungkinan donasi sukarela di lokasi tertentu.",
+    "keywords": [
+      "tiket masuk",
+      "gratis",
+      "biaya wisata",
+      "donasi",
+      "uang tunai"
+    ]
+  },
+  {
+    "id": "etika-berkunjung",
+    "title": "Apa etika yang perlu diperhatikan saat berkunjung?",
+    "type": "faq",
+    "category": "Panduan",
+    "summary": "Gunakan pakaian yang sopan, terutama saat memasuki masjid dan area makam. Jaga kebersihan, hindari suara berlebihan ketika berziarah atau beribadah, patuhi petunjuk di situs cagar budaya, dan mintalah izin sebelum memotret warga dari jarak dekat.",
+    "keywords": [
+      "etika wisata",
+      "pakaian sopan",
+      "masjid",
+      "makam",
+      "ziarah",
+      "cagar budaya"
+    ]
+  },
+  {
+    "id": "fasilitas-wisata",
+    "title": "Fasilitas apa yang tersedia di Pulau Penyengat?",
+    "type": "faq",
+    "category": "Fasilitas",
+    "summary": "Profil Desa Wisata Pulau Penyengat pada Jadesta mencantumkan fasilitas seperti balai pertemuan, kafetaria, kios suvenir, musala, spot foto, area Wi-Fi, dan ATM. Ketersediaan operasional setiap fasilitas dapat berubah, sehingga wisatawan sebaiknya menyiapkan uang tunai dan kebutuhan pribadi seperlunya.",
+    "keywords": [
+      "fasilitas",
+      "atm",
+      "kafetaria",
+      "suvenir",
+      "musholla",
+      "wifi",
+      "uang tunai"
+    ]
+  },
+  {
+    "id": "cuaca-penyeberangan",
+    "title": "Apa yang harus dilakukan jika cuaca kurang baik?",
+    "type": "faq",
+    "category": "Keselamatan",
+    "summary": "Karena akses menuju pulau menggunakan perahu motor, keberangkatan dapat dipengaruhi cuaca dan kondisi perairan. Ikuti arahan operator, gunakan perlengkapan keselamatan yang tersedia, dan tunda penyeberangan apabila operator menyatakan perjalanan tidak aman.",
+    "keywords": [
+      "cuaca",
+      "hujan",
+      "gelombang",
+      "keselamatan",
+      "life jacket",
+      "pompong"
+    ]
+  },
+  {
+    "id": "sejarah-singkat",
+    "title": "Mengapa Pulau Penyengat penting dalam sejarah Melayu?",
+    "type": "faq",
+    "category": "Sejarah",
+    "summary": "Pulau Penyengat memiliki peran penting sebagai kawasan pertahanan, pusat pemerintahan Riau-Lingga, serta pusat pembelajaran dan kebudayaan Melayu-Islam. Pulau ini juga berkaitan erat dengan Raja Ali Haji, tokoh sastra dan bahasa Melayu yang menghasilkan Gurindam Dua Belas dan karya penting lainnya.",
+    "keywords": [
+      "sejarah penyengat",
+      "riau lingga",
+      "raja ali haji",
+      "gurindam dua belas",
+      "melayu islam"
     ]
   },
   {
     "id": "routing-astar",
-    "title": "Rute wisata dengan A*",
+    "title": "Bagaimana fitur rute wisata bekerja?",
     "type": "faq",
     "category": "Teknis",
-    "summary": "Website menggunakan OpenStreetMap untuk tampilan peta. Rekomendasi rute dihitung memakai algoritma A* pada graf manual yang dibuat dari titik jalan hasil observasi lapangan.",
+    "summary": "Website menggunakan OpenStreetMap untuk menampilkan peta. Rekomendasi rute dihitung dengan algoritma A* pada graf manual dari titik jalan dan destinasi yang telah dimasukkan ke aplikasi. Gunakan rute sebagai panduan awal dan tetap perhatikan kondisi jalan di lapangan.",
     "keywords": [
       "rute",
       "astar",
       "a star",
       "graf manual",
       "osm",
-      "peta"
+      "peta",
+      "openstreetmap"
     ]
   },
   {
     "id": "ai-rag",
-    "title": "AI Assistant dan RAG",
+    "title": "Bagaimana AI Assistant menjawab pertanyaan?",
     "type": "faq",
     "category": "Teknis",
-    "summary": "AI Assistant menggunakan Gemini API. RAG mengambil informasi dari knowledge base lokal agar jawaban lebih sesuai dengan konteks Pulau Penyengat.",
+    "summary": "AI Assistant menggunakan Gemini API dan pendekatan RAG. Sistem mencari data yang relevan dari knowledge base lokal terlebih dahulu, lalu memakai data tersebut sebagai konteks jawaban agar informasi lebih sesuai dengan Pulau Penyengat. Informasi operasional yang mudah berubah tetap perlu dikonfirmasi kepada pengelola setempat.",
     "keywords": [
       "ai",
       "gemini",
       "rag",
       "pak cik",
-      "assistant"
-    ]
-  },
-  
-  {
-    "id": "routing-astar",
-    "title": "Rute wisata dengan A*",
-    "type": "faq",
-    "category": "Teknis",
-    "summary": "Website menggunakan OpenStreetMap untuk tampilan peta. Rekomendasi rute dihitung memakai algoritma A* pada graf manual yang dibuat dari titik jalan hasil observasi lapangan.",
-    "keywords": [
-      "rute",
-      "astar",
-      "a star",
-      "graf manual",
-      "osm",
-      "peta"
+      "assistant",
+      "knowledge base"
     ]
   }
 ]
