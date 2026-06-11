@@ -1,3 +1,12 @@
+:root {
+  --hijau: var(--green-800);
+  --hijau-dark: var(--green-900);
+  --hijau-muted: var(--green-050);
+  --gold: var(--gold-600);
+  --border: var(--line);
+  --text: var(--ink);
+}
+
 .admin-shell {
   min-height: 100vh;
   display: grid;
