@@ -15,7 +15,7 @@ const fallbackHistory = [
 
 const fallbackFaq = [
   { id: 'faq-akses', title: 'Bagaimana cara menuju Pulau Penyengat?', summary: 'Wisatawan dapat menyeberang menggunakan pompong dari dermaga di Tanjungpinang.' },
-  { id: 'faq-rute', title: 'Apakah website dapat membantu menentukan rute?', summary: 'Ya. Pilih destinasi pada peta, lalu gunakan tombol Buat Rute A* untuk melihat jalur.' },
+  { id: 'faq-rute', title: 'Apakah website dapat membantu menentukan rute?', summary: 'Ya. Pilih destinasi pada peta, lalu gunakan tombol Cari Rute untuk melihat jalur.' },
   { id: 'faq-ai', title: 'Apa fungsi Pak Cik Penyengat?', summary: 'Pak Cik Penyengat adalah asisten wisata yang membantu menjawab pertanyaan tentang destinasi, transportasi, sejarah, dan budaya.' }
 ]
 

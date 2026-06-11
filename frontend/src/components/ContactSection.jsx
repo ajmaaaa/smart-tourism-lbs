@@ -70,7 +70,7 @@ function ContactSection() {
           <div>
             <h4>Fitur</h4>
             <a href="#beranda">Peta Interaktif</a>
-            <a href="#beranda">Rute A*</a>
+            <a href="#beranda">Rute</a>
             <button type="button" onClick={() => window.dispatchEvent(new CustomEvent('open-chat'))}>Asisten Pak Cik</button>
             <a href="#galeri">Galeri Foto</a>
           </div>

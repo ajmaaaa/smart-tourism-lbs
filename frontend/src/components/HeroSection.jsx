@@ -116,7 +116,7 @@ function HeroSection() {
     setSelectedId(dest.id)
     setFlyTarget([dest.coordinates.lat, dest.coordinates.lng])
     setRoute(null)
-    setRouteStatus(`Tujuan dipilih: ${dest.name}. Klik Buat Rute A* untuk melihat jalur.`)
+    setRouteStatus(`Tujuan dipilih: ${dest.name}. Klik Cari Rute untuk melihat jalur.`)
   }, [])
 
   useEffect(() => {
@@ -225,7 +225,7 @@ function HeroSection() {
     setLocError(false)
     setRoute(null)
     setFlyTarget([coords.lat, coords.lng])
-    setRouteStatus('Posisi berhasil ditemukan. Pilih tujuan, lalu klik Buat Rute A*.')
+    setRouteStatus('Posisi berhasil ditemukan. Pilih tujuan, lalu klik Cari Rute.')
   }, [])
 
   const handleLocateError = useCallback(() => {
@@ -311,7 +311,7 @@ function HeroSection() {
             </div>
             <div className="hero__fact">
               <span>⌖</span>
-              <div><strong>Rute A*</strong><small>navigasi antardestinasi</small></div>
+              <div><strong>Rute</strong><small>navigasi antardestinasi</small></div>
             </div>
             <div className="hero__fact">
               <span>✦</span>
@@ -352,7 +352,7 @@ function HeroSection() {
                 <span>Tujuan yang dipilih</span>
                 <strong>{selectedDestination.name}</strong>
               </div>
-              <button type="button" onClick={createRoute}>Buat Rute A*</button>
+              <button type="button" onClick={createRoute}>Cari Rute</button>
             </div>
 
             <p className="hero__route-status">{routeStatus}</p>
